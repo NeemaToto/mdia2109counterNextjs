@@ -74,15 +74,15 @@ export default function Counter() {
           </div>
         </div>
 
-        <div className={styles.grid}>
+        <div class="counter-container" className={styles.grid}>
          <h2>
           The number is:
          </h2>
          <p>
             {number}
          </p>
-         <button onClick={() => setNumber(number + 1)}>Increment</button>
-         <button onClick={() => setNumber(number - 1)}>Decrement</button>
+         <button onClick={() => setNumber(number + 1)}>+ Increment</button>
+         <button onClick={() => setNumber(number - 1)}>- Decrement</button>
         </div>
       </main>
     </>
