@@ -152,6 +152,11 @@ a {
   color: white;
 }
 
+.submit-button:active{
+  transform: translateY(4px);
+  background-color: rgb(18, 109, 183);
+}
+
 .counter-container{
   display: flex;
   justify-content: center;
