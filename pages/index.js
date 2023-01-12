@@ -11,9 +11,9 @@ export default function Home() {
 
   const router = useRouter();
 
-  const [formData, setFormData] = useState ({
-    firstName:'',
-    username:''
+  const [formData, setFormData] = useState({
+    firstName: '',
+    username: ''
   })
 
   const CheckLogin = () => {
@@ -40,13 +40,14 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <div class="index-container">
+          <h1>Welcome to <span>NextJs 13</span>. Sign in to continue.</h1>
           <label>First name:</label>
-          <input type="text" id="first" name="first" pattern="[A-Z]{1}[a-z]{2-10}" title="The first letter should be capital" onChange={(e => setFormData({...formData, firstName: e.target.value}))}/>
-
+          <input type="text" id="first" name="first" pattern="[A-Z]{1}[a-z]{2-10}" title="The first letter should be capital" onChange={(e => setFormData({ ...formData, firstName: e.target.value }))} />
           <label>Username:</label>
-          <input type="text" id="username" name="username" required title="The first letter should be capital" minLength="5" maxLength="10"onChange={(e => setFormData({...formData, username: e.target.value}))}/>
-
-          <button type="submit" onClick={() => CheckLogin()}>Submit</button>
+          <input type="text" id="username" name="username" required title="The first letter should be capital" minLength="5" maxLength="10" onChange={(e => setFormData({ ...formData, username: e.target.value }))} />
+          <button class="submit-button" type="submit" onClick={() => CheckLogin()}>Submit</button>
+        </div>
       </main>
     </>
   )
